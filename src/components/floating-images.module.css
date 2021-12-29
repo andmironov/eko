@@ -1,0 +1,255 @@
+.floating-images {
+    position: absolute;
+    width: 1024px;
+    height: 100vh;
+    min-height: 720px;
+    margin: 0 0 0 50%;
+    left: -512px;
+    top: 0;
+    z-index: 100;
+}
+
+.boy {
+    position: absolute;
+    background-image: url(../images/boy.svg);
+    background-size: 100%;
+    width: 165px;
+    height: 170px;
+    left: 538px;
+    top: 37px;
+    transform: translate3d(0, -100px, 0) rotate(0deg) scale(0.8);
+    transition: all 0.8s cubic-bezier(0.25, 1, 0.5, 1);
+    opacity: 0;
+    transition-delay: 0s;
+    animation: floteRotate2 5s cubic-bezier(0.45, 0, 0.55, 1) infinite alternate;
+    animation-delay: 2s;
+  }
+
+  @keyframes floteRotate2 {
+    to {
+      transform: translate3d(0, -20px, 0) rotate(23deg) scale(1);
+    }
+  }
+
+  :global(.shown) .boy {
+    transform: translate3d(0, -10px, 0) rotate(20deg) scale(1);
+    opacity: 1;
+  }
+
+  .girl-wrap {
+    position: absolute;
+    width: 368px;
+    height: 203px;
+    right: -50px;
+    bottom: 120px;
+  }
+
+  .girl {
+    position: absolute;
+    background-image: url(../images/girl.svg);
+    background-size: 100%;
+    width: 196px;
+    height: 165px;
+    left: 70px;
+    top: 0px;
+    transform: translate3d(60px, 100px, 0) rotate(20deg) scale(1);
+    transition: all 0.8s cubic-bezier(0.25, 1, 0.5, 1);
+    opacity: 0;
+    transition-delay: 0s;
+    animation: float2 3.2s cubic-bezier(0.45, 0, 0.55, 1) infinite alternate;
+    animation-delay: 2s
+  }
+
+  :global(.shown) .girl {
+    transform: translate3d(0, 0, 0) rotate(20deg) scale(1);
+    opacity: 1;
+  }
+
+  @keyframes float2 {
+    to {
+      transform: translate3d(0, -10px, 0) rotate(20deg) scale(1);
+    }
+  }
+  
+  .left-curl {
+    position: absolute;
+    background-image: url(../images/left-curl.svg);
+    background-size: 100%;
+    width: 116px;
+    height: 82px;
+    left: 0px;
+    top: 120px;
+    transform: translate3d(60px, 100px, 0) rotate(-40deg);
+    transition: all 0.8s cubic-bezier(0.25, 1, 0.5, 1);
+    opacity: 0;
+    transition-delay: 0.1s;
+    animation: leftCurlFloat 3.2s cubic-bezier(0.45, 0, 0.55, 1) infinite alternate;
+    animation-delay: 2s;
+  }
+
+  :global(.shown) .left-curl {
+    transform: translate3d(0, 0, 0) rotate(0deg) scale(1);
+    opacity: 1;
+  }
+  
+  .right-curl {
+    position: absolute;
+    background-image: url(../images/right-curl.svg);
+    background-size: 100%;
+    width: 121px;
+    height: 79px;
+    right: 5px;
+    top: 70px;
+    transform: translate3d(60px, 100px, 0) rotate(40deg);
+    transition: all 0.8s cubic-bezier(0.25, 1, 0.5, 1);
+    opacity: 0;
+    transition-delay: 0s;
+    animation: rightCurlFloat 3.2s cubic-bezier(0.45, 0, 0.55, 1) infinite alternate;
+    animation-delay: 2s;
+  }
+
+  :global(.shown) .right-curl {
+    transform: translate3d(0, 0, 0) rotate(0deg) scale(1);
+    opacity: 1;
+  }
+
+  @keyframes leftCurlFloat {
+    to {
+      transform: translate3d(0, -5px, 0) rotate(-5deg);
+    }
+  }
+  
+  @keyframes rightCurlFloat {
+    to {
+      transform: translate3d(0, -5px, 0) rotate(10deg);
+    }
+  }
+  
+  @keyframes floteRotate {
+    to {
+      transform: translate3d(0, -10px, 0) rotate(-2deg);
+    }
+  }
+
+  .star {
+    position: absolute;
+    background-image: url(../images/star.svg);
+    background-size: 100%;
+    width: 94px;
+    height: 94px;
+    left: 224px;
+    top: 210px;
+    transform: translate3d(-100px, -100px, 0) rotate(-20deg) scale(1);
+    transition: all 0.8s cubic-bezier(0.25, 1, 0.5, 1);
+    opacity: 0;
+    transition-delay: 0s
+  }
+
+  :global(.shown) .star {
+    transform: translate3d(0, 0, 0) rotate(-300deg) scale(1.7);
+    opacity: 1;
+  }
+
+  .net {
+    position: absolute;
+    background-image: url(../images/net.svg);
+    background-size: 100%;
+    width: 218px;
+    height: 159px;
+    left: 440px;
+    bottom: 185px;
+    transform: translate3d(0px, 40px, 0) rotate(-10deg) scale(0.5);
+    transition: all 0.8s cubic-bezier(0.25, 1, 0.5, 1);
+    opacity: 0;
+    transition-delay: 0.3s
+  }
+
+  :global(.shown) .net {
+    transform: translate3d(0, 0, 0) rotate(0deg) scale(1);
+    opacity: 1;
+  }
+
+  .d {
+    position: absolute;
+    background-image: url(../images/d.svg);
+    background-size: 100%;
+    width: 174px;
+    height: 226px;
+    right: -240px;
+    top: 185px;
+    transform: translate3d(100px, -50px, 0) rotate(40deg);
+    transition: all 0.8s cubic-bezier(0.25, 1, 0.5, 1);
+    opacity: 0;
+    transition-delay: 0.1s
+  }
+
+  :global(.shown) .d {
+    transform: translate3d(0, 0, 0) rotate(20deg) scale(1);
+    opacity: 1;
+  }
+
+  .five {
+    position: absolute;
+    background-image: url(../images/5.svg);
+    background-size: 100%;
+    width: 203px;
+    height: 328px;
+    left: -200px;
+    bottom: 40px;
+    transform: translate3d(-80px, 100px, 0) rotate(20deg) scale(0.8);
+    transition: all 0.8s cubic-bezier(0.25, 1, 0.5, 1);
+    opacity: 0;
+    transition-delay: 0.15s;
+    animation: float3 3.2s cubic-bezier(0.45, 0, 0.55, 1) infinite alternate;
+    animation-delay: 2.2s
+  }
+
+  :global(.shown) .five {
+    transform: translate3d(0, 0, 0) rotate(-20deg) scale(1);
+    opacity: 1;
+  }
+
+  @keyframes float3 {
+    to {
+      transform: translate3d(0, -8px, 0) rotate(-25deg) scale(1);
+    }
+  }
+
+  .punk {
+    position: absolute;
+    background-image: url(../images/punk.svg);
+    background-size: 100%;
+    width: 171px;
+    height: 104px;
+    right: 30px;
+    top: 150px;
+    transform: translate3d(-200px, 0, 0) rotate(-70deg) scale(0.2);
+    transition: all 0.8s cubic-bezier(0.25, 1, 0.5, 1);
+    opacity: 0;
+    transition-delay: 0.2s
+  }
+
+  :global(.shown) .punk {
+    transform: translate3d(0, 0, 0) rotate(-20deg) scale(1);
+    opacity: 1;
+  }
+
+  .scale {
+    position: absolute;
+    background-image: url(../images/scale.svg);
+    background-size: 100%;
+    width: 60px;
+    height: 289px;
+    left: -160px;
+    top: 0px;
+    transform: translate3d(-100px, -10px, 0) rotate(0deg) scale(0.5);
+    transition: all 0.8s cubic-bezier(0.25, 1, 0.5, 1);
+    opacity: 0;
+    transition-delay: 0.1s
+  }
+
+  :global(.shown) .scale {
+    transform: translate3d(0, 0, 0) rotate(-40deg) scale(1);
+    opacity: 1;
+  }
+  

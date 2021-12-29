@@ -1,0 +1,21 @@
+  @font-face {
+    font-family: 'GoshaSansRegular';
+    src: url('../fonts/GoshaSans-Regular.eot');
+    src: url('../fonts/GoshaSans-Regular.eot?#iefix') format('embedded-opentype'), 
+         url('../fonts/GoshaSans-Regular.woff2') format('woff2'),
+         url('../fonts/GoshaSans-Regular.woff') format('woff'),
+         url('../fonts/GoshaSans-Regular.ttf')  format('truetype');
+    font-weight: normal;
+    font-style: normal;
+  }
+  
+  @font-face {
+    font-family: 'GerberaLight';
+    src: url('../fonts/Gerbera-Light.eot');
+    src: url('../fonts/Gerbera-Light.eot?#iefix') format('embedded-opentype'), 
+         url('../fonts/Gerbera-Light.woff2') format('woff2'),
+         url('../fonts/Gerbera-Light.woff') format('woff'),
+         url('../fonts/Gerbera-Light.ttf')  format('truetype');
+    font-weight: 300;
+    font-style: normal;
+  }
