@@ -3,6 +3,11 @@ import * as styles from '../components/signup.module.css'
 import Layout from '../components/layout'
 
 class Signup extends React.Component {
+
+    constructor(props) {
+        super(props)
+    }
+    
     state = {
         name: "",
         age: "",
@@ -17,72 +22,103 @@ class Signup extends React.Component {
         this.setState({
             [name]: value,
         })
+        
     }
 
     handleSubmit = event => {
         event.preventDefault()
-        alert(`Welcome ${this.state.name}!`)
+        //alert(`Welcome ${this.state.name}!`)
     }
   
     render() {
         return (
             <Layout>
-                <h2>Записаться</h2>
-                <p>Занятия проходят 2 раза в неделю по 3 часа или 3 раза в неделю по 2 часа; первая или вторая половина дня. Первое занятие – бесплатно.</p>
-                <form onSubmit={this.handleSubmit}>
-                    
-                    <label>Филиал Экошколы</label>
-                    <input 
-                        type="radio" 
-                        name="filial" 
-                        value="1"
-                        onChange={this.handleInputChange}
-                        id="tab1" 
-                        checked 
-                    />
-	                <label for="tab1">Парк «Юность»</label>
+                
+                <div className={styles.formWrapper}>
+                   
+                    <div className={styles.formHeader}>
+                        <h2>Записаться</h2>
+                        <p>Пробное занятие – бесплатно. Мы свяжемся с Вами в&nbsp;ближайшее время</p>
+                    </div>
 
-	                <input 
-                        type="radio" 
-                        name="filial" 
-                        value="2"
-                        onChange={this.handleInputChange}
-                        id="tab2"
-                    />
-	                <label for="tab2">г. Гурьевск</label>
-                    
-                    <label>
-                    Возраст ребенка
-                    <input
-                        type="text"
-                        name="age"
-                        value={this.state.firstName}
-                        onChange={this.handleInputChange}
-                    />
-                    </label>
-                    
-                    <label>
-                    Ваше имя
-                    <input
-                        type="text"
-                        name="name"
-                        value={this.state.name}
-                        onChange={this.handleInputChange}
-                    />
-                    </label>
+                    <form onSubmit={this.handleSubmit}>
+                        
+                        <div className={styles.formRow}>
+                            <div className={styles.formElement}>
+                                <label className={styles.formLabel}>Филиал Экошколы</label>
+                                
+                                <div className={styles.formField}>
+                                    <div className={styles.formSwitchWrap}>
+                                        <input 
+                                            type="radio" 
+                                            name="filial" 
+                                            value="locationPark"
+                                            onChange={this.handleInputChange}
+                                            id="locationPark"
+                                            defaultChecked
+                                        />
+                                        <label for="locationPark">Парк «Юность»</label>
 
-                    <label>
-                    Ваш номер телефона
-                    <input
-                        type="phone"
-                        name="phone"
-                        value={this.state.phone}
-                        onChange={this.handleInputChange}
-                    />
-                    </label>
+                                        <input 
+                                            type="radio" 
+                                            name="filial" 
+                                            value="locationGuryevsk"
+                                            onChange={this.handleInputChange}
+                                            id="locationGuryevsk"
+                                        />
+                                        <label for="locationGuryevsk">г. Гурьевск</label>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div className={`${styles.formElement} ${styles.shortFormElement}`}>
+                                <label for="age" className={styles.formLabel}>Возраст ребенка</label>
+                                <div className={styles.formField}>
+                                    <input
+                                        type="text"
+                                        name="age"
+                                        id="age"
+                                        value={this.state.firstName}
+                                        onChange={this.handleInputChange}
+                                    />
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div className={styles.formRow}>
+                            <div className={`${styles.formElement} ${styles.shortFormElement}`}>
+                                <label for="name" className={styles.formLabel}>Ваше имя</label>
+                                <div className={styles.formField}>
+                                    <input
+                                        type="text"
+                                        name="name"
+                                        id="name"
+                                        value={this.state.name}
+                                        onChange={this.handleInputChange}
+                                    />
+                                </div>
+                            </div>
 
-                    <button type="submit">Submit</button>
-                </form>
+                            <div className={styles.formElement}>
+                                <label for="phone" className={styles.formLabel}>Ваш номер телефона</label>
+                                <div className={styles.formField}>
+                                    <input
+                                        type="phone"
+                                        name="phone"
+                                        id="phone"
+                                        value={this.state.phone}
+                                        onChange={this.handleInputChange}
+                                    />
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div className={styles.formFooter}>
+                            <a className={styles.formBack}href="/">Назад</a>
+                            <button className={styles.formSubmit} type="submit">Отправить</button>
+                        </div>
+                    </form>
+                </div>
             </Layout>
         )
     }

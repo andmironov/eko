@@ -150,6 +150,13 @@
     opacity: 1;
   }
 
+  :global(.sign-up) .star {
+    transform: translate3d(-200px, -200px, 0) rotate(-20deg) scale(3.7);
+    opacity: 1;
+  }
+
+  
+
   .net {
     position: absolute;
     background-image: url(../images/net.svg);

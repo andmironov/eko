@@ -1,0 +1,151 @@
+.form-wrapper {
+    width: 640px;
+    margin: 0 auto;
+    padding: 100px 0 0 0;
+}
+
+.form-header {
+
+}
+
+.form-header h2{
+    margin: 0;
+    padding: 0 0 16px 0;
+}
+
+.form-header p {
+    font-size: 21px;
+    margin: 0;
+    padding: 0 0 0 0;
+}
+
+form {
+    font-family: "GerberaLight", -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+    font-size: 16px;
+}
+
+.form-row {
+    width: 640px;
+    padding: 32px 0 0 0;
+    display: flex;
+    justify-content: space-between
+}
+
+.form-element {
+    padding: 0 0 0 0;
+}
+
+.short-form-element {
+    padding: 0 0 0 0;
+}
+
+
+.form-label {
+    padding: 0 0 12px 0;
+}
+
+.form-field {
+    border: 0.5px solid #000000;
+    position: relative;
+    width: 400px;
+    height: 60px;
+}
+
+.form-field input{
+    font-size: 16px;
+    height: 20px;
+    width: 368px;
+    padding: 20px 16px;
+}
+
+.short-form-element .form-field {
+    width: 200px;
+}
+
+.short-form-element input {
+    width: 168px;
+}
+
+.form-switch-wrap {
+    display: flex;
+    overflow: hidden;
+}
+
+.form-switch-wrap input {
+    position: absolute !important;
+	clip: rect(0, 0, 0, 0);
+	height: 1px;
+	width: 1px;
+	border: 0;
+	overflow: hidden;
+}
+
+.form-switch-wrap label {
+	color: #000000;
+	font-size: 16px;
+    width: 200px;
+	line-height: 1;
+	text-align: center;
+	padding: 21px 0;
+    border-top: 1px solid #FFFFFF;
+    border-bottom: 1px solid #FFFFFF;
+}
+
+.form-switch-wrap label:first-of-type {
+    border-left: 1px solid #FFFFFF;
+    border-right: 2px solid #FFFFFF;
+}
+
+.form-switch-wrap label:last-of-type {
+    border-left: 2px solid #FFFFFF;
+    border-right: 1px solid #FFFFFF;
+}
+
+.form-switch-wrap label:hover {
+	cursor: pointer;
+}
+
+.form-switch-wrap input:checked + label {
+	border-color: #000000;
+}
+
+.form-submit {
+    display: inline-block;
+    background: #FFE576;
+    border: 0.5px solid #000000;
+    padding: 21px 32px; 
+    text-transform: uppercase;
+    font-family: "GoshaSansRegular";
+    font-size: 17px;
+    letter-spacing: 1.5px;
+    text-decoration: none;
+    color: #000000; 
+    cursor: pointer;
+  }
+
+  .form-submit:hover {
+    background: #FCDB4E;
+}
+
+.form-back {
+    display: inline-block;
+    text-transform: uppercase;
+    font-family: "GoshaSansRegular";
+    font-size: 17px;
+    letter-spacing: 1.5px;
+    text-decoration: none;
+    color: #000000; 
+    cursor: pointer;
+  }
+
+  .form-back:hover {
+    opacity: 0.5;
+}
+
+.form-footer {
+    display: flex;
+    padding: 32px 0 0 0;
+    width: 640px;
+    justify-content: space-between;
+    align-items: center;
+}

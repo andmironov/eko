@@ -1,27 +1,35 @@
 import * as React from 'react'
+import { TransitionState } from "gatsby-plugin-transition-link"
 import * as styles from './floating-images.module.css'
 
 class FloatingImages extends React.Component {
 
   constructor(props) {
-    super(props);
-    this.state = { show: false };
+    super(props)
+    this.state = { imagesState: props.imagesState }
   }
 
   componentDidMount () {
-    this.timeoutId = setTimeout(function () {
-      this.setState({show: true});
-    }.bind(this), 1200);
+    const pathname = window.location.pathname
+    
+    if(pathname == "/signup") {
+      this.setState({imagesState: "sign-up"})
+    } else {
+      this.timeoutId = setTimeout(function () {
+        this.setState({imagesState: "shown"})
+      }.bind(this), 1200)
+    }
   }
 
   componentWillUnmount () {
     if (this.timeoutId) {
-      clearTimeout(this.timeoutId);
+      clearTimeout(this.timeoutId)
     }
   }
   
   render() {
-    let shown = this.state.show ? "shown" : "";
+    let shown = this.state.imagesState
+    
     return (
       <div className={`${styles.floatingImages} ${shown}`}>
         <div className={`${styles.boy} ${shown}`}/>
