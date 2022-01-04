@@ -7,11 +7,11 @@ const Footer = ({ pageTitle }) => {
         <div className={styles.footerRow}>
           <div className={styles.footerCol}>
               <span className={styles.greyText}>Инстаграм</span>
-              <span>@ekoshkola.ru</span>
+              <a href="https://www.instagram.com/ekoshkola.ru/">@ekoshkola.ru</a>
           </div>
           <div className={styles.footerCol}>
               <span className={styles.greyText}>Телефон</span>
-              <span>+7 (963) 738-19-10</span>
+              <a href="tel:+7 (963) 738-19-10">+7 (963) 738-19-10</a>
           </div>
         </div>
         

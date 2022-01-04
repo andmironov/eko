@@ -32,13 +32,14 @@ class FloatingImages extends React.Component {
     
     return (
       <div className={`${styles.floatingImages} ${shown}`}>
-        <div className={`${styles.boy} ${shown}`}/>
         <div className={`${styles.star} ${shown}`} />
         <div className={`${styles.net} ${shown}`} />
         <div className={`${styles.d} ${shown}`} />
         <div className={`${styles.five} ${shown}`} />
         <div className={`${styles.punk} ${shown}`} />
         <div className={`${styles.scale} ${shown}`} />
+
+        <div className={`${styles.boy} ${shown}`}/>
        
         <div className={`${styles.girlWrap} ${shown}`}>
             <div className={styles.leftCurl} />

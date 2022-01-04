@@ -1,5 +1,5 @@
 .intro-wrap {
-  padding: 120px 0 32px 0;
+  padding: 0;
   max-width: 896px;
   margin: 0;
 }
@@ -12,6 +12,9 @@ h2 {
 }
 
 .page-title {
+  margin: 0;
+  padding: 0 0 32px 0;
+  max-width: 860px;
   transform: translate3d(0px, 40px, 0) rotate(0deg) scale(1);
   transition: all 0.8s cubic-bezier(0.25, 1, 0.5, 1);
   opacity: 0;
@@ -60,7 +63,8 @@ h2 {
     transition: transform 0.8s cubic-bezier(0.25, 1, 0.5, 1),
                 opacity 0.8s cubic-bezier(0.25, 1, 0.5, 1);
     opacity: 0;
-    transition-delay: 0.2s
+    transition-delay: 0.2s;
+    display: none;
   }
 
   :global(.shown) .button {
@@ -72,3 +76,40 @@ h2 {
     background: #FFE576;
 }
   
+
+@media (max-width: 1024px) {
+
+  .page-title {
+    max-width: auto;
+  }
+  
+  .sub-header {
+    max-width: auto;
+  }
+  
+}
+
+
+@media (max-width: 860px) {
+
+  h2.page-title {
+    font-size: 32px;
+    padding: 0 0 24px 0;
+  }
+
+}
+
+
+
+@media (max-width: 600px) {
+
+  h2.page-title {
+    font-size: 26px;
+  }
+  
+  .sub-header {
+    font-size: 16px;
+  }
+
+}
+

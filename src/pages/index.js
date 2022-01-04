@@ -34,9 +34,9 @@ class IndexPage extends React.Component {
       <Layout>
       <div className={`${styles.introWrap} ${shown}`}>
         <h2 className={styles.pageTitle}>
-          Развивающий центр для детей&nbsp;3-7 лет. <br/>Подготовка к&nbsp;школе, творческие занятия и&nbsp;забота об&nbsp;окружающей среде
+          Развивающий центр для детей&nbsp;<nobr>3-7 лет.</nobr> Подготовка к&nbsp;школе, творческие занятия и&nbsp;забота об&nbsp;окружающей среде
         </h2>
-        <p  className={styles.subHeader}>У нас гибкий график занятий, отличные локации, и компетентные преподаватели. Пробное занятие – бесплатно.</p>
+        <p  className={styles.subHeader}>У нас гибкий график занятий, отличные локации, и&nbsp;компетентные преподаватели. Пробное занятие – бесплатно.</p>
         <a onClick={this.handleClick} className={styles.button} href="#">Записаться</a>
       </div>
     </Layout>

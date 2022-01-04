@@ -14,10 +14,31 @@ body {
 }
 
 .layout-inner {
+    display: flex;
     margin: 0 auto;
     width: 1024px;
     height: 100vh;
     min-height: 720px;
     position: relative;
+    flex-direction: column;
+    justify-content: space-between;
     z-index: 200;
 }
+
+@media (max-width: 1280px) {
+
+    .layout-inner{
+        width: auto;
+        padding: 0 32px;
+    }
+    
+}
+
+@media (max-width: 600px) {
+  
+    .layout-inner{
+        padding: 0 24px;
+    }
+  
+}
+  
