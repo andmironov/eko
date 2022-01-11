@@ -3,7 +3,6 @@
     display: flex;
     justify-content: space-between;
     font-size: 16px;
-
 }
 
 .logo {
@@ -19,13 +18,19 @@
   @media (max-width: 860px) {
     
     .header {
-        padding: 24px 0 0 0;
+        position: fixed;
+        box-sizing: border-box;
+        width: 100%;
+        left: 0;
+        top: 0;
+        padding: 24px;
         align-items: flex-start;
     }
 
     .logo {
-        width:160px;
-        height: 21px;
+        width:99px;
+        height: 46px;
+        background-image: url(../images/logo2.svg);
       }
     
 

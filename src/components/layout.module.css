@@ -18,7 +18,7 @@ body {
     margin: 0 auto;
     width: 1024px;
     height: 100vh;
-    min-height: 720px;
+    min-height: 540px;
     position: relative;
     flex-direction: column;
     justify-content: space-between;
@@ -27,18 +27,17 @@ body {
 
 @media (max-width: 1280px) {
 
-    .layout-inner{
+    .layout-inner {
         width: auto;
+        min-height: 540px;
         padding: 0 32px;
     }
     
 }
 
-@media (max-width: 600px) {
-  
-    .layout-inner{
+@media (max-width: 860px) {
+    .layout-inner {
         padding: 0 24px;
+        justify-content: center
     }
-  
 }
-  

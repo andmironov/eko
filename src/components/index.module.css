@@ -97,8 +97,11 @@ h2 {
     padding: 0 0 24px 0;
   }
 
-}
+  .intro-wrap {
+    padding: 0 0 102px 0;
+  }
 
+}
 
 
 @media (max-width: 600px) {

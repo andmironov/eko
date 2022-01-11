@@ -21,7 +21,7 @@ const Footer = ({ pageTitle }) => {
               <span>Парк «Юность»</span>
           </div>
           <div className={styles.footerCol}>
-              <span className={styles.greyText}>Чайковского, 18</span>
+              <span className={styles.greyText}>Советская, 3</span>
               <span>г. Гурьевск</span>
           </div>
         </div>
